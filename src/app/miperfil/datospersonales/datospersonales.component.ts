@@ -21,7 +21,7 @@ export class DatospersonalesComponent implements OnInit {
   condition = "";
 
   calcularIMC(weight, height) {
-    let bmi = parseInt(weight) / (parseInt(height) ** 2);
+    let bmi = parseInt(weight.value) / (parseInt(height.value) ** 2);
     this.imc = bmi.toString();
     this.calculateCondition(bmi);
     //return bmi;
