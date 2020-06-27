@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ctrlDiet';
+  imagePath: string = './assets/favicon.png';
+  currentValue: boolean = true;
+
+
 }
