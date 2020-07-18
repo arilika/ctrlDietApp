@@ -27,13 +27,13 @@ export class DatospersonalesComponent implements OnInit {
     //return bmi;
     return false;
   }
-  calculateCondition(imc) {
+  calculateCondition(bmi) {
     let result = "";
-    if (imc < 18.5) {
+    if (bmi < 18.5) {
       result = "Bajo de Peso";
-    } else if (imc < 25) {
+    } else if (bmi < 25) {
       result = "Normal";
-    } else if (imc < 30) {
+    } else if (bmi < 30) {
       result = "Sobrepeso";
     } else {
       result = "Obesidad";

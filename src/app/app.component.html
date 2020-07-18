@@ -6,12 +6,9 @@
   <div class="container">
     <div class="intro">
       <h2>Controla tu Dieta diaria</h2> <i class="fa fa-user"></i>
-      <p>Puedes controlar con <span class="highlight" style="font-weight: bold;"> {{ title }} </span> a dia lo que estas
-        comiendo marcando cual
-        alimento
-        ya consumiste.</p>
-      <!-- <img src="{{imagePath}}" class="" alt="Logo"> -->
-      <button disabled={{currentValue}}></button>
+      <p>Puedes controlar con <span class="highlight" style="font-weight: bold;"> {{ title }} </span> tus tiempos de
+        comida y marcando cual alimento ya consumiste en la semana.</p>
+      <button disabled={{currentValue}}>COMENZAR</button>
     </div>
 
     <div class="perfil">
@@ -19,16 +16,37 @@
     </div>
 
     <div>
-
       <div class="dieta">
         <app-listadieta></app-listadieta>
       </div>
-
       <div class="bonus">
         <!-- <app-calculoagua></app-calculoagua>  -->
       </div>
-    </div>
+      <div *ngIf=isActive [style.background-color]="'#f2f2f2'">
+        <app-ng-style-component></app-ng-style-component>
 
+        <form>
+          <div class="form-check">
+            <ul>
+              <li *ngFor="let tiempo of tiemposComida">
+                {{tiempo}}
+              </li>
+            </ul>
+
+            <div [ngStyle]="{'border':'3px dotted #c8c8c8', 'margin':'20px', 'padding':'20px'}">
+              <div *ngFor="let comidas of comidas">
+                <input type="checkbox"> {{comidas}}
+              </div>
+            </div>
+          </div>
+          <app-introservicios></app-introservicios>
+        </form>
+
+      </div>
+    </div>
+    <div>
+
+    </div>
   </div>
 
 
