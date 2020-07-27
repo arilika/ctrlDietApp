@@ -10,7 +10,10 @@ import { FormsModule } from '@angular/forms';
 import { NgStyleComponentComponent } from './ng-style-component/ng-style-component.component';
 import { IntroserviciosComponent } from './introservicios/introservicios.component';
 import { DatosService } from './datos.service';
-
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { ObtenerUsuarioComponent } from './gets/obtener-usuario/obtener-usuario.component'
+import { AppRoutingModule } from './app-routing/app-routing.module';
+import { NoEncontradoComponent } from './no-encontrado/no-encontrado.component';
 
 
 @NgModule({
@@ -18,6 +21,8 @@ import { DatosService } from './datos.service';
     AppComponent,
     NgStyleComponentComponent,
     IntroserviciosComponent,
+    ObtenerUsuarioComponent,
+    NoEncontradoComponent,
 
 
   ],
@@ -27,7 +32,9 @@ import { DatosService } from './datos.service';
     MiperfilModule,
     BonusModule,
     MybootstrapModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [DatosService],
   bootstrap: [AppComponent]

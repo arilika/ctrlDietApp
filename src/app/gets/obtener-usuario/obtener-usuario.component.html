@@ -1,0 +1,40 @@
+Ingresa tu el ID del usuario:
+<input type="text" #textoId>
+<button (click)="obtenerUsuario(textoId.value)">
+    Buscar</button>
+
+<ng-container *ngIf="noEncontrado">
+    Usuario no existe.
+</ng-container>
+
+<ng-container *ngIf="user">
+    <h3>Bienvenida {{user.name}} </h3>
+    <div>
+        <label>Tu Usuario:</label> {{user.username}}
+    </div>
+    <div>
+        <label>Tu Correo:</label>
+        {{user.email}}
+    </div>
+    <div>
+        <label>Tu Peso:</label>
+        {{user.weightList}}
+    </div>
+    <div>
+        <label>Tu IMC:</label>
+        {{user.imc}}
+    </div>
+    <div>
+        <label>Tu Dieta:</label>
+        {{ user.dietList }}
+
+        <div *ngFor="let user of user">
+            <input type="checkbox">
+            {{ user.dietList }}
+        </div>
+
+
+    </div>
+    <br>
+    <br>
+</ng-container>

@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  webapiURL: 'https://my-json-server.typicode.com/arilika/dietappjson/'
+  //'https://jsonplaceholder.typicode.com/'
 };
 
 /*

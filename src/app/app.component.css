@@ -1,0 +1,31 @@
+a.nav-item{
+    color: #fff !important;
+    text-transform: uppercase;
+}
+a.nav-item.nav-link.active{
+    text-decoration: underline;
+}
+a.nav-item:hover{
+    color: #ffcac2 !important;
+}
+.bg-main-nav{
+    background-color: #F96B66;
+}
+.perfil{
+    margin-top: 60px;
+}
+.container{
+    margin-top: 80px;
+}
+header{
+    background-color: #ffcac2;
+}
+
+.slogan{
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.text-red{
+    color: #F96B66;
+}

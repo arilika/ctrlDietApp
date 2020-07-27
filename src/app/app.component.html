@@ -1,65 +1,92 @@
-<!-- Toolbar -->
+<!-- Logo y  Slogan 
 <div class="toolbar" role="banner">
   <img width="300" alt="Angular Logo" src="../assets/logo.png" />
   <span>Cada tiempo se marca </span>
-
-  <div class="container">
-    <div class="intro">
-      <h2>Controla tu Dieta diaria</h2> <i class="fa fa-user"></i>
-      <p>Puedes controlar con <span class="highlight" style="font-weight: bold;"> {{ title }} </span> tus tiempos de
-        comida y marcando cual alimento ya consumiste en la semana.</p>
-      <button disabled={{currentValue}}>COMENZAR</button>
-    </div>
-
-    <div class="perfil">
-      <app-datospersonales></app-datospersonales>
-    </div>
-
-    <div>
-      <div class="dieta">
-        <app-listadieta></app-listadieta>
+</div> -->
+<!--Header Section-->
+<header>
+  <div>
+    <a class="navbar-brand" href="#">
+      <img width="300" alt=" Logo" src="../assets/logo.png" />
+      <span class="slogan text-red">...Cada tiempo se marca </span>
+    </a>
+  </div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-main-nav">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav mx-auto">
+        <a class="nav-item nav-link active" routerLink='/inicio'>Inicio <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" routerLink='/perfil/3'>Perfil</a>
+        <a class="nav-item nav-link" href="#">Historial</a>
       </div>
-      <div class="bonus">
-        <!-- <app-calculoagua></app-calculoagua>  -->
-      </div>
-      <div *ngIf=isActive [style.background-color]="'#f2f2f2'">
-        <app-ng-style-component></app-ng-style-component>
+    </div>
+  </nav>
+</header>
 
+
+<div class="container text-left">
+  <div class="row content">
+    <div class="col-sm-8 intro">
+      <router-outlet></router-outlet>
+      <app-obtener-usuario></app-obtener-usuario>
+      <!--<div>
+        <h2>Controla tu Dieta diaria</h2> <i class="fa fa-user"></i>
+        <p>Puedes controlar con <span class="highlight" style="font-weight: bold;"> {{ title }} </span> tus tiempos de
+          comida y marcando cual alimento ya consumiste en la semana.</p>
+        <button disabled={{currentValue}}>COMENZAR</button>
+      </div> -->
+
+      <!--Directivas DE Angular-->
+      <!--<div *ngIf=isActive [style.background-color]="'#f2f2f2'">
+        <div>
+          <app-ng-style-component></app-ng-style-component>
+        </div>
         <form>
           <div class="form-check">
-            <ul>
-              <li *ngFor="let tiempo of tiemposComida">
-                {{tiempo}}
-              </li>
-            </ul>
-
             <div [ngStyle]="{'border':'3px dotted #c8c8c8', 'margin':'20px', 'padding':'20px'}">
               <div *ngFor="let comidas of comidas">
                 <input type="checkbox"> {{comidas}}
               </div>
             </div>
-          </div>
-          <app-introservicios></app-introservicios>
-        </form>
+            <app-introservicios></app-introservicios>
 
+          </div>
+        </form>
+      </div> -->
+      <!--End of Directivas DE Angular-->
+    </div>
+    <!--end of col 8-->
+    <div class="col-sm-4">
+      <!--Aqui Viene el calculo IMC-->
+      <div class="perfil">
+        <app-datospersonales></app-datospersonales>
       </div>
     </div>
-    <div>
 
-    </div>
   </div>
 
 
+  <!--
+  <ul>
+    <li *ngFor="let tiempo of tiemposComida">
+      {{tiempo}}
+    </li>
+  </ul>
+  <div [ngStyle]="{'border':'3px dotted #c8c8c8', 'margin':'20px', 'padding':'20px'}">
+    <div *ngFor="let comidas of comidas">
+      <input type="checkbox"> {{comidas}}
+    </div>
+  </div>
+-->
   <!-- Footer -->
   <footer>
-
+    <svg id="clouds" alt="Gray Clouds Background" xmlns="http://www.w3.org/2000/svg" width="1000" height="485.677"
+      viewBox="0 0 2611.084 485.677">
+      <path id="Path_39" data-name="Path 39"
+        d="M2379.709,863.793c10-93-77-171-168-149-52-114-225-105-264,15-75,3-140,59-152,133-30,2.83-66.725,9.829-93.5,26.25-26.771-16.421-63.5-23.42-93.5-26.25-12-74-77-130-152-133-39-120-212-129-264-15-54.084-13.075-106.753,9.173-138.488,48.9-31.734-39.726-84.4-61.974-138.487-48.9-52-114-225-105-264,15a162.027,162.027,0,0,0-103.147,43.044c-30.633-45.365-87.1-72.091-145.206-58.044-52-114-225-105-264,15-75,3-140,59-152,133-53,5-127,23-130,83-2,42,35,72,70,86,49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33,61.112,8.015,113.854-5.72,150.492-29.764a165.62,165.62,0,0,0,110.861-3.236c47,94,178,113,251,33,31.385,4.116,60.563,2.495,86.487-3.311,25.924,5.806,55.1,7.427,86.488,3.311,73,80,204,61,251-33a165.625,165.625,0,0,0,120,0c51,13,108,15,157-5a147.188,147.188,0,0,0,33.5-18.694,147.217,147.217,0,0,0,33.5,18.694c49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33C2446.709,1093.793,2554.709,922.793,2379.709,863.793Z"
+        transform="translate(142.69 -634.312)" fill="#eee" />
+    </svg>
   </footer>
-
-  <svg id="clouds" alt="Gray Clouds Background" xmlns="http://www.w3.org/2000/svg" width="1000" height="485.677"
-    viewBox="0 0 2611.084 485.677">
-    <path id="Path_39" data-name="Path 39"
-      d="M2379.709,863.793c10-93-77-171-168-149-52-114-225-105-264,15-75,3-140,59-152,133-30,2.83-66.725,9.829-93.5,26.25-26.771-16.421-63.5-23.42-93.5-26.25-12-74-77-130-152-133-39-120-212-129-264-15-54.084-13.075-106.753,9.173-138.488,48.9-31.734-39.726-84.4-61.974-138.487-48.9-52-114-225-105-264,15a162.027,162.027,0,0,0-103.147,43.044c-30.633-45.365-87.1-72.091-145.206-58.044-52-114-225-105-264,15-75,3-140,59-152,133-53,5-127,23-130,83-2,42,35,72,70,86,49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33,61.112,8.015,113.854-5.72,150.492-29.764a165.62,165.62,0,0,0,110.861-3.236c47,94,178,113,251,33,31.385,4.116,60.563,2.495,86.487-3.311,25.924,5.806,55.1,7.427,86.488,3.311,73,80,204,61,251-33a165.625,165.625,0,0,0,120,0c51,13,108,15,157-5a147.188,147.188,0,0,0,33.5-18.694,147.217,147.217,0,0,0,33.5,18.694c49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33C2446.709,1093.793,2554.709,922.793,2379.709,863.793Z"
-      transform="translate(142.69 -634.312)" fill="#eee" />
-  </svg>
-
-</div>

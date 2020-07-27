@@ -25,6 +25,6 @@ export class AppComponent {
   constructor() {
     this.edad = 33;
     this.direccion = { pais: "Costa Rica", provincia: "San Jose", ciudad: "Alajuelita" };
-    this.comidas = ["Pinto con huevo", "Tortilla con Queso", "1T Frutas", "12 Almendras", "Porcion Carne con Ensalada", "Porcion Carne con Picadillo", "1T Pasta", "Sopa", "1 Paquete de Galleta con Queso", "1 Manzana", "Ceviche", "Vegetales"];
+    this.comidas = ["lista vieja", "Pinto con huevo", "Tortilla con Queso", "1T Frutas", "12 Almendras", "Porcion Carne con Ensalada", "Porcion Carne con Picadillo", "1T Pasta", "Sopa", "1 Paquete de Galleta con Queso", "1 Manzana", "Ceviche", "Vegetales"];
   }
 }
