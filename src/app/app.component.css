@@ -1,8 +1,9 @@
+
 a.nav-item{
     color: #fff !important;
     text-transform: uppercase;
 }
-a.nav-item.nav-link.active{
+a.nav-item:active{
     text-decoration: underline;
 }
 a.nav-item:hover{
@@ -15,17 +16,35 @@ a.nav-item:hover{
     margin-top: 60px;
 }
 .container{
-    margin-top: 80px;
+    background-color: rgba(241, 241, 241, 0.93);
+    border-radius: 20px;
+    margin-top: 50px ;
+    padding: 40px;
 }
 header{
     background-color: #ffcac2;
 }
 
 .slogan{
-    font-size: 14px;
+    font-size: 16x;
     letter-spacing: 1px;
+    text-shadow: 1px 1px rgb(92, 14, 14);
 }
 
 .text-red{
     color: #F96B66;
+}
+
+/*Formulario Test Driven*/
+.active{
+    color: white ;
+    font-weight: bolder;
+}
+
+.jumbotron, ::ng-deep  body {
+    color:#333;
+}
+
+li{
+    cursor: pointer;
 }

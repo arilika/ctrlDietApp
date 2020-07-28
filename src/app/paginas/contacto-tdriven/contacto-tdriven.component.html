@@ -1,0 +1,120 @@
+<div class="container col-md-8">
+    <div [hidden]="submitted">
+        <h1>Contáctanos</h1>
+        <p>Si tienes alguna duda o consulta por favor envianos un mensaje </p>
+        <form (ngSubmit)="onSubmit(usuarioForm)" #usuarioForm="ngForm" novalidate="">
+            <button type="button" class="btn btn-light mx-auto" (click)="nuevoUsuario()">
+                Limpiar Formulario</button>
+            <div class="form-group">
+                <label for="nombre">Nombre *</label>
+                <input type="text" class="form-control" id="nombre" required [(ngModel)]="miUsuario.name" name="nombre"
+                    #nombre="ngModel" minlength="5">
+                <div [hidden]="nombre.valid || nombre.pristine" class="alert alert-danger">
+                    <div *ngIf="nombre.errors?.required">
+                        El campo de nombre es requerido.
+                    </div>
+                    <div *ngIf="nombre.errors?.minlength">
+                        Este campo debe tener al menos
+                        {{ nombre.errors.minlength.requiredLength}} caracteres.
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="correoelectronico">Correo Electrónico</label>
+                <input type="text" class="form-control" id="correoelectronico" [(ngModel)]="miUsuario.email"
+                    name="correoelectronico" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                    #correoelectronico=ngModel>
+                <div [hidden]="correoelectronico.valid || correoelectronico.pristine" class="alert alert-danger">
+                    <div *ngIf="correoelectronico.errors?.pattern">
+                        El correo electrónico es incorrecto. Debe contener @ y .
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="telefono">Teléfono</label>
+                <input type="text" class="form-control" id="telefono" [(ngModel)]="miUsuario.phone" name="telefono"
+                    pattern="/^([0-9]{5})+((-{1})*)+([0-9]{6}" #telefono=ngModel>
+                <div [hidden]="telefono.valid || telefono.pristine" class="alert alert-danger">
+                    <div *ngIf="telefono.errors?.pattern">
+                        El formato del telefono incorrecto. Debe ser 8888-8888.
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div> <label>Género</label></div>
+                <div class="custom-control custom-radio custom-control-inline" *ngFor="let item of generoKeys2">
+                    <input type="radio" id="genero{{item}}" [(ngModel)]="miUsuario.genero" [value]="item" name="genero"
+                        class="custom-control-input">
+                    <label class="custom-control-label" for="genero{{item}}">{{item}}</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="comentario">Comentarios</label>
+                <textarea class="form-control" id="comentario" rows="7" required [(ngModel)]="miUsuario.comentario"
+                    name="comentario" #comentario="ngModel" minlength="1"></textarea>
+
+                <div [hidden]="comentario.valid || comentario.pristine" class="alert alert-danger">
+                    <div *ngIf="comentario.errors?.minlength">
+                        Este campo debe tener al menos
+                        {{ comentario.errors.minlength.requiredLength}} caracteres.
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div> <label>Acepta</label></div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" required [(ngModel)]="miUsuario.isOk" name="isOk"
+                        class="custom-control-input" id="customCheck1">
+                    <label class="custom-control-label" for="customCheck1">
+                        Acepta los términos y condiciones</label>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-success" [disabled]="!usuarioForm.form.valid">
+                Enviar</button>
+
+            <button type="button" class="btn btn-light" (click)="usuarioForm.reset()">
+                Resetear</button>
+
+
+            <!--<div>
+                Datos: {{miUsuario |json }}
+            </div>-->
+
+        </form>
+    </div>
+
+    <div [hidden]="!submitted">
+        <h2>Datos enviados:</h2>
+        <div class="row">
+            <div class="col-xs-3">Nombre: </div>
+            <div class="col-xs-9">{{ miUsuario.name }}</div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3">Correo Electrónico: </div>
+            <div class="col-xs-9">{{ miUsuario.email }}</div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3">Telefono: </div>
+            <div class="col-xs-9">{{ miUsuario.phone }}</div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3">Género: </div>
+            <div class="col-xs-9">{{ miUsuario.genero }}</div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3">Comentarios: </div>
+            <div class="col-xs-9">{{ miUsuario.comentario }}</div>
+        </div>
+        <br>
+        <button class="btn btn-primary" (click)="submitted=false">Editar</button>
+        <button class="btn btn-primary" (click)="submitted=false"> <a routerLink='/inicio'>Volver a la página de
+                inicio</a></button>
+    </div>
+</div>

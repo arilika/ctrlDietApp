@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    background: rgba(229, 237, 183, 0.7) url('assets/background-2.jpg') repeat 0 0;
+    background-size: 150px 150px;
+    color: #333;
+    font-family: 'Montserrat',Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+h1,h2,h3,h4{
+    font-family: 'Exo',Arial, Helvetica, sans-serif;
+}
+
+button{
+    background-color: rgba(241, 241, 241, 0.8);
+    border-radius: 10px;
+    border: 1px solid #333;
+    margin: 5px;
+    padding: 3px 10px ;
+}
+button:hover{
+    background-color: #F96B66;
+    color: #fff;
+}

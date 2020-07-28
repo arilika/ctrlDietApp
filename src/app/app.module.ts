@@ -14,6 +14,9 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { ObtenerUsuarioComponent } from './gets/obtener-usuario/obtener-usuario.component'
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { NoEncontradoComponent } from './no-encontrado/no-encontrado.component';
+import { ContactoComponent } from './contacto/contacto.component';
+import { ContactoTDrivenComponent } from './paginas/contacto-tdriven/contacto-tdriven.component';
+
 
 
 @NgModule({
@@ -23,6 +26,8 @@ import { NoEncontradoComponent } from './no-encontrado/no-encontrado.component';
     IntroserviciosComponent,
     ObtenerUsuarioComponent,
     NoEncontradoComponent,
+    ContactoComponent,
+    ContactoTDrivenComponent,
 
 
   ],
