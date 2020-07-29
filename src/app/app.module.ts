@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
 import { BonusModule } from './bonus/bonus.module';
 import { DietaModule } from './dieta/dieta.module';
@@ -16,7 +16,9 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
 import { NoEncontradoComponent } from './no-encontrado/no-encontrado.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { ContactoTDrivenComponent } from './paginas/contacto-tdriven/contacto-tdriven.component';
-
+import { InicioComponent } from './inicio/inicio.component';
+import { ListadoComponent } from './componentes/listado/listado.component';
+import { CantidadComponent } from './componentes/cantidad/cantidad.component';
 
 
 @NgModule({
@@ -28,8 +30,9 @@ import { ContactoTDrivenComponent } from './paginas/contacto-tdriven/contacto-td
     NoEncontradoComponent,
     ContactoComponent,
     ContactoTDrivenComponent,
-
-
+    InicioComponent,
+    ListadoComponent,
+    CantidadComponent
   ],
   imports: [
     BrowserModule,
@@ -39,9 +42,12 @@ import { ContactoTDrivenComponent } from './paginas/contacto-tdriven/contacto-td
     MybootstrapModule,
     FormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CommonModule
   ],
-  providers: [DatosService],
+  providers: [
+    DatosService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -18,10 +18,10 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav mx-auto">
-        <a class="nav-item nav-link active" routerLink='/inicio'>Inicio <span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link" routerLink='/perfil/3'>Perfil</a>
-        <a class="nav-item nav-link" href="#">Historial</a>
-        <a class="nav-item nav-link" routerLink='/contactoTD'>Contacto</a>
+        <a class="nav-item nav-link active mx-3" routerLink='/inicio'>Inicio <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link mx-3" routerLink='/perfil/3'>Perfil</a>
+        <a class="nav-item nav-link mx-3" routerLink='/plan'>Plan de Dieta</a>
+        <a class="nav-item nav-link mx-3" routerLink='/contactoTD'>Contacto</a>
       </div>
     </div>
   </nav>
@@ -30,37 +30,12 @@
 
 <div class="container text-left">
   <div class="row content">
-    <div class="col-sm-8 intro">
+    <div class="col-sm-8 col-xs-12 intro">
       <router-outlet></router-outlet>
-      <!--<app-obtener-usuario></app-obtener-usuario>
-      <div>
-        <h2>Controla tu Dieta diaria</h2> <i class="fa fa-user"></i>
-        <p>Puedes controlar con <span class="highlight" style="font-weight: bold;"> {{ title }} </span> tus tiempos de
-          comida y marcando cual alimento ya consumiste en la semana.</p>
-        <button disabled={{currentValue}}>COMENZAR</button>
-      </div> -->
 
-      <!--Directivas DE Angular-->
-      <!--<div *ngIf=isActive [style.background-color]="'#f2f2f2'">
-        <div>
-          <app-ng-style-component></app-ng-style-component>
-        </div>
-        <form>
-          <div class="form-check">
-            <div [ngStyle]="{'border':'3px dotted #c8c8c8', 'margin':'20px', 'padding':'20px'}">
-              <div *ngFor="let comidas of comidas">
-                <input type="checkbox"> {{comidas}}
-              </div>
-            </div>
-            <app-introservicios></app-introservicios>
-
-          </div>
-        </form>
-      </div> -->
-      <!--End of Directivas DE Angular-->
     </div>
-    <!--end of col 8-->
-    <div class="col-sm-4">
+
+    <div class="col-sm-4 col-xs-12">
       <!--Aqui Viene el calculo IMC-->
       <div class="perfil">
         <app-datospersonales></app-datospersonales>
@@ -68,21 +43,7 @@
     </div>
 
   </div>
+</div>
+<footer>
 
-
-  <!--
-  <ul>
-    <li *ngFor="let tiempo of tiemposComida">
-      {{tiempo}}
-    </li>
-  </ul>
-  <div [ngStyle]="{'border':'3px dotted #c8c8c8', 'margin':'20px', 'padding':'20px'}">
-    <div *ngFor="let comidas of comidas">
-      <input type="checkbox"> {{comidas}}
-    </div>
-  </div>
--->
-  <!-- Footer -->
-  <footer>
-
-  </footer>
+</footer>

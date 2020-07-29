@@ -1,23 +1,22 @@
 <h1>Bienvenido a CTRL DIET</h1>
 <div>
-    <h2>Controla tu Dieta diaria</h2> <i class="fa fa-user"></i>
+    <h2>Controla tu Dieta diaria</h2>
     <p>Puedes controlar con <span class="highlight" style="font-weight: bold;"> {{ title }} </span> tus tiempos de
         comida y marcando cual alimento ya consumiste en la semana.</p>
-    <button disabled={{currentValue}}>COMENZAR</button>
     <!--Directivas DE Angular-->
-    <div *ngIf=isActive [style.background-color]="'#f2f2fs2'">
+
+    <div *ngIf="isActive" [style.background-color]="'#f2f2fs2'">
         <div>
-            <h3>Que has comido
-                hoy?</h3>
+            <h3>Qué has comido hoy?</h3>
         </div>
         <form>
-            <div class="form-check">
-                <div [style.border]="'3px dotted #c8c8c8'">
+            <div class="form-check form-diet">
+                <div [style.border]="'4px dotted #F96B67'">
                     <div *ngFor="let comidas of comidas">
                         <input type="checkbox"> {{comidas}}
                     </div>
                 </div>
-                <!-- <app-introservicios></app-introservicios> -->
+                <app-introservicios></app-introservicios>
 
             </div>
         </form>
