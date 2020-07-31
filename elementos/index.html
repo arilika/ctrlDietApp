@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Angular Elementos</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <componentes-elemento usuarioid="1"></componentes-elemento>
+    <script type="text/javascript" src="componentes.js"></script>
+    <script>
+        let componente = document.querySelector('componentes-elemento');
+        componente.nombre = "Ariela Carrillo";
+        componente.arregloComentarios = [
+            "Me gusto, es super facil de realizar y nunca paso hambre. Ya se convirtio en parte de mi estilo de vida.",
+            "La mejor dieta.",
+            "Muy recomendados!!!"];
+        alert(componente.nombre);
+    </script>
+</body>
+
+</html>

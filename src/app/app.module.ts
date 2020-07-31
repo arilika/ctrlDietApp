@@ -1,3 +1,4 @@
+import { Injector } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -19,6 +20,8 @@ import { ContactoTDrivenComponent } from './paginas/contacto-tdriven/contacto-td
 import { InicioComponent } from './inicio/inicio.component';
 import { ListadoComponent } from './componentes/listado/listado.component';
 import { CantidadComponent } from './componentes/cantidad/cantidad.component';
+
+import { createCustomElement } from '@angular/elements';
 
 
 @NgModule({
@@ -46,8 +49,12 @@ import { CantidadComponent } from './componentes/cantidad/cantidad.component';
     CommonModule
   ],
   providers: [
-    DatosService
+    DatosService,
+
   ],
   bootstrap: [AppComponent]
+  //entryComponents: [AppComponent] //Aqui pongo el componente que voy hacer reutilizable
 })
-export class AppModule { }
+export class AppModule {
+}
+//  ngDoBootstrap() { }
