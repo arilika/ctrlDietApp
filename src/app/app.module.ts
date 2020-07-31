@@ -1,14 +1,14 @@
-import { Injector } from '@angular/core';
+//import { Injector } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
-import { BonusModule } from './bonus/bonus.module';
-import { DietaModule } from './dieta/dieta.module';
+//import { BonusModule } from './bonus/bonus.module';
+//import { DietaModule } from './dieta/dieta.module';
 import { MiperfilModule } from './miperfil/miperfil.module';
-import { MybootstrapModule } from './mybootstrap/mybootstrap.module';
+//import { MybootstrapModule } from './mybootstrap/mybootstrap.module';
 import { FormsModule } from '@angular/forms';
-import { NgStyleComponentComponent } from './ng-style-component/ng-style-component.component';
+//import { NgStyleComponentComponent } from './ng-style-component/ng-style-component.component';
 import { IntroserviciosComponent } from './introservicios/introservicios.component';
 import { DatosService } from './datos.service';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
@@ -20,14 +20,15 @@ import { ContactoTDrivenComponent } from './paginas/contacto-tdriven/contacto-td
 import { InicioComponent } from './inicio/inicio.component';
 import { ListadoComponent } from './componentes/listado/listado.component';
 import { CantidadComponent } from './componentes/cantidad/cantidad.component';
-
-import { createCustomElement } from '@angular/elements';
+//import { createCustomElement } from '@angular/elements';
+//import "rxjs";
+//import "lodash";
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NgStyleComponentComponent,
+    //NgStyleComponentComponent,
     IntroserviciosComponent,
     ObtenerUsuarioComponent,
     NoEncontradoComponent,
@@ -39,10 +40,10 @@ import { createCustomElement } from '@angular/elements';
   ],
   imports: [
     BrowserModule,
-    DietaModule,
+    //DietaModule,
     MiperfilModule,
-    BonusModule,
-    MybootstrapModule,
+    //BonusModule,
+    //MybootstrapModule,
     FormsModule,
     HttpClientModule,
     AppRoutingModule,
@@ -57,4 +58,3 @@ import { createCustomElement } from '@angular/elements';
 })
 export class AppModule {
 }
-//  ngDoBootstrap() { }

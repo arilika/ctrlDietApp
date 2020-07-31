@@ -9,7 +9,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build:elements": "ng build --prod --output-hashing none",
-    "build:elementsscript": "node elements-build.js"
+    "build:elementsscript": "node elements-build.js",
+    "sme": "./node_modules/.bin/source-map-explorer"
   },
   "private": true,
   "dependencies": {

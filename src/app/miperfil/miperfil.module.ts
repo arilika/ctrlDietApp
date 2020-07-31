@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DatospersonalesComponent } from './datospersonales/datospersonales.component';
 import { FormsModule } from '@angular/forms';
-import { MybootstrapModule } from '../mybootstrap/mybootstrap.module';
+//import { MybootstrapModule } from '../mybootstrap/mybootstrap.module';
 
 
 @NgModule({
@@ -10,7 +10,7 @@ import { MybootstrapModule } from '../mybootstrap/mybootstrap.module';
   imports: [
     CommonModule,
     FormsModule,
-    MybootstrapModule
+    //MybootstrapModule
   ],
   exports: [
     DatospersonalesComponent
